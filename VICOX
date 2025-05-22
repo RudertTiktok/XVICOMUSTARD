@@ -1,27 +1,17 @@
--- Layanan Roblox
-local RobloxReplicatedStorage = game:GetService('RobloxReplicatedStorage')
-local RbxAnalyticsService = game:GetService('RbxAnalyticsService')
-local ReplicatedStorage = game:GetService('ReplicatedStorage')
-local UserInputService = game:GetService('UserInputService')
-local NetworkClient = game:GetService('NetworkClient')
-local TweenService = game:GetService('TweenService')
-local VirtualUser = game:GetService('VirtualUser')
-local HttpService = game:GetService('HttpService')
-local RunService = game:GetService('RunService')
-local LogService = game:GetService('LogService')
-local Players = game:GetService('Players')
-local Debris = game:GetService('Debris')
-local Stats = game:GetService('Stats')
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+local Debris = game:GetService("Debris")
+local VirtualInputManager = game:GetService("VirtualInputManager")
+local Stats = game:GetService("Stats")
 
 -- Tunggu hingga game selesai dimuat
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
-
-local SwordModule = require(ReplicatedStorage.Shared.SwordModule)
-
--- Inisialisasi SwordModule
-SwordModule:Start()
 
 -- Variabel Lokal
 local LocalPlayer = Players.LocalPlayer
