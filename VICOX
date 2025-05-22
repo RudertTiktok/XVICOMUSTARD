@@ -653,7 +653,7 @@ RunService.PreSimulation:Connect(function()
     if not ball_properties.auto_spam or ball_properties.distance > 10 or Player.Entity.properties.ping > 500 then
         return
     end
-    AutoParry.perform_parry()
+    AutoParry.Parry()
 end)
 
 ConnectionsManager["Auto Parry"] = RunService.PostSimulation:Connect(function()
